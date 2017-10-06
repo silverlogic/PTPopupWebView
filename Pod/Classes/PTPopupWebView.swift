@@ -361,7 +361,7 @@ open class PTPopupWebView : UIView {
     }
     
     override open func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if let webView = object as? WKWebView {
+        if object is WKWebView {
             if let keyPath = keyPath {
                 switch keyPath {
                 case "title":
